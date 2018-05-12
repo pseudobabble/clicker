@@ -1,21 +1,29 @@
 import React, { Component } from 'react';
+import Clicker from './components/Clicker';
+import Jumbo from './components/Jumbo';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  render() {
+ 
+  constructor() {
+    super();
+
+    this.state = {
+        title: 'Clickity Click!'
+    };
+}
+
+render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        <div>
+            <Jumbo title={this.state.title} />
+            <div className="mt-5 text-center">
+                <Clicker />
+            </div>
+        </div>
     );
-  }
+}
 }
 
 export default App;
