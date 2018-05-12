@@ -37,7 +37,7 @@ class Clicker extends Component {
                     <div className="col-sm">
                     </div>
                     <div className="col-sm">    
-                        <h2>{this.state.count}</h2>
+                        <h1 className="display-1">{this.state.count}</h1>
                     </div>
                     <div className="col-sm">
                     </div>
